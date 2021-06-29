@@ -1,19 +1,46 @@
 package addressbook;
 
+import java.util.Scanner;
+
 public class ContactFunction {
+	Scanner scan = new Scanner(System.in);
+	ContactDetails contact;
 
-	public void details(String firstname, String lastname, String address, String city, String state, int zip, String phonenumber, String email) {
+	void details() {
+		contact = new ContactDetails();
 
+		System.out.println("Enter first name : ");
+		String FirstName = scan.next();
 
+		System.out.println("Enter last name : ");
+		String LastName = scan.next();
 
-		System.out.println("Enter first name : " + firstname);
-		System.out.println("Enter first name : " + lastname);
-		System.out.println("Enter first name : " + address);
-		System.out.println("Enter first name : " + city);
-		System.out.println("Enter first name : " + state);
-		System.out.println("Enter first name : " + zip);
-		System.out.println("Enter first name : " + phonenumber);
-		System.out.println("Enter first name : " + email);
+		System.out.println("Enter address : ");
+		String Address = scan.next();
+
+		System.out.println("Enter city : ");
+		String City = scan.next();
+
+		System.out.println("Enter state : ");
+		String State = scan.next();
+
+		System.out.println("Enter zip code : ");
+		int Zip = scan.nextInt();
+
+		System.out.println("Enter phone number : ");
+		String PhoneNumber = scan.next();
+
+		System.out.println("Enter email : ");
+		String Email = scan.next();
+
+		contact.setfirstname(FirstName);
+		contact.setlastname(LastName);
+		contact.setaddress(Address);
+		contact.setcity(City);
+		contact.setstate(State);
+		contact.setzip(Zip);
+		contact.setphonenumber(PhoneNumber);
+		contact.setEmail(Email);
+		System.out.println(contact);
 	}
-
 }
